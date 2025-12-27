@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .input {
+    @apply border border-gray-300 rounded-md p-2 w-full mt-1 mb-4;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  .label {
+    @apply font-semibold;
+  }
+  .button{
+    @apply p-2 m-1 w-full bg-linear-to-r from-green-300 to-green-400 rounded-xl hover:bg-linear-to-l cursor-pointer disabled:cursor-not-allowed disabled:opacity-50
+  }
+  .button-default{
+    @apply p-2 m-1 w-full bg-linear-to-r from-sky-300 to-violet-200 rounded-xl hover:bg-linear-to-l hover:opacity-75 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50
+  }
+  .table{
+    @apply border-collapse border border-gray-400 w-3/4 text-center p-4 rounded-md 
+    
+  }
+   td{
+    
+      @apply border-b border-gray-300 p-2
+  }
+  .loading {
+    @apply p-6 bg-blue-100 animate-pulse rounded-2xl m-6
+  }
+}
